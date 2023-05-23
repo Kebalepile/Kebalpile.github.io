@@ -1,0 +1,278 @@
+.message {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mp3List {
+  flex-flow: column nowrap;
+  max-height: 300px;
+  overflow-y: scroll;
+  transform: translate(5%, 15%);
+  position: absolute;
+  top: 30vh;
+  left: 5%;
+  width: 40%;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+.mp3List::-webkit-scrollbar {
+  height: 4px;
+  width: 5px;
+}
+
+.mp3List::-webkit-scrollbar-track {
+  background-color: #252525;
+}
+.mp3List::-webkit-scrollbar-thumb {
+  background-color: #252525;
+  border-radius: 10px;
+}
+.mp3List::-webkit-scrollbar-thumb:hover {
+  background-color: #252525;
+}
+
+.mp3MediaCard .name {
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mp3List,
+.mp4List {
+  display: flex;
+  align-items: center;
+  background-color: #2d2d2d;
+}
+.mp3List > header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #2d2d2d;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  z-index: 1;
+}
+.mp3List > header > hr {
+  width: 90%;
+  margin: auto;
+  border: 1px solid #353434;
+}
+.mp3List > header > p {
+  margin: 20px auto auto 40px;
+}
+
+.mp3MediaCard {
+  border-bottom: 1px solid rgba(92, 92, 92, 0.247);
+  padding: 5px;
+  width: 100%;
+  height: 90px;
+  align-items: center;
+}
+.mp3MediaCard,
+.mp4MediaCard {
+  display: flex;
+  background-color: #2525256c;
+  border-radius: 2px;
+}
+
+.mp3Icon {
+  margin-right: 6px;
+  min-width: 45px;
+  min-height: 45px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    70deg,
+    #ff80f9,
+    #b834af,
+    #f527eb,
+    #f527eb,
+    #ff5ef4
+  );
+  fill: rgba(250, 250, 250, 0.404);
+  box-shadow: 0 0 10px rgb(233, 17, 168);
+  border-radius: 2px;
+  transition: width 0.5s ease;
+  opacity: 0.2;
+}
+
+.isPlaying {
+  opacity: 08;
+  fill: white;
+}
+
+.searchMp3 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+}
+.searchMp4 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+}
+.searchMp3 summary,
+.searchMp4 summary {
+  width: 100px;
+  height: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.mp4Icon {
+  margin-right: 5px;
+  height: 150px;
+  width: 120px;
+  border-radius: 4px;
+}
+.mp4List {
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  width: 45%;
+  height: 450px;
+  position: absolute;
+  right: 2%;
+  top: 20vh;
+  overflow-y: scroll;
+  background-color: rgba(70, 70, 70, 0);
+}
+
+.mp4List::-webkit-scrollbar {
+  height: 4px;
+  width: 5px;
+}
+
+.mp4List::-webkit-scrollbar-track {
+  background-color: #3f3e3e07;
+}
+.mp4List::-webkit-scrollbar-thumb {
+  background-color: #25252504;
+  border-radius: 10px;
+}
+.mp4List::-webkit-scrollbar-thumb:hover {
+  background-color: #b9b9b9;
+}
+.mp4MediaCard {
+  justify-content: center;
+  margin-left: 2px;
+}
+.mp4MediaCard > figure {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.mp4MediaCard > figure > figcaption {
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  height: 75px;
+  width: 120px;
+  padding: 5px 5px 5px 10px;
+  filter: blur(1px);
+  white-space: break-spaces;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: justify;
+}
+.mp4MediaCard > figure > figcaption:hover {
+  filter: none;
+  transition: filter 0.6s ease-in-out;
+  background-color: rgba(65, 61, 61, 0.466);
+}
+
+.mp4List > header {
+  display: none;
+}
+@media screen and (max-width: 1162px) {
+  .mp4List {
+    width: 44%;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 932px) {
+  .searchMp4 {
+    margin-top: 15vh;
+    margin-right: 25vw;
+  }
+  .mp3List {
+    width: 50%;
+  }
+  .mp4List {
+    width: 30%;
+    height: 400px;
+  }
+  .searchMp3 summary {
+    margin-left: calc(100 / 60 * 40%);
+  }
+}
+@media screen and (max-width: 912px) {
+  .searchMp4 {
+    top: 0;
+    left: 40%;
+  }
+}
+@media screen and (max-width: 882px) {
+  .mp4List {
+    width: 25%;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .searchMp4 {
+    width: 300px;
+    left: 30%;
+  }
+}
+@media screen and (max-width: 632px) {
+  .searchMp3 {
+    position: static;
+    margin: 20px auto 20px auto;
+  }
+  .searchMp4 {
+    position: static;
+    margin: 60px auto 5px auto;
+  }
+  .searchMp3 summary {
+    margin: 20px auto 20px 45vw;
+  }
+
+  .mp3List {
+    position: static;
+    width: 90%;
+    margin: 30px auto 150px auto;
+  }
+
+  .mp3List > header {
+    width: 90vw;
+  }
+
+  .mp3MediaCard {
+    width: 70vw;
+  }
+
+  .mp4List {
+    width: 100vw;
+    position: static;
+    width: 100vw;
+    height: 160px;
+    bottom: 0;
+    overflow-x: scroll;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    margin: auto;
+    padding: 0;
+  }
+  .searchMp4 summary {
+    margin: auto auto 10px auto;
+  }
+}
