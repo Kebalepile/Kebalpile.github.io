@@ -1,4 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Checkout [Demo](https://kebalpile-github-io.vercel.app/ )
 ## About web application
       
         CineSync is a cutting-edge web application that brings movie lovers
